@@ -1,0 +1,1 @@
+console.log("Here is the repo for learning typescript as well as other related course")
