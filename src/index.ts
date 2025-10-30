@@ -20,3 +20,11 @@ function hello(name:string){
 }
 
 console.log(hello("Irael"))
+
+
+           // to use unknown type in typeScript
+
+let value: unknown ="Elyse"
+
+if(typeof value =="string"){
+console.log(value)}
