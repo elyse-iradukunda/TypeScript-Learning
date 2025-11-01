@@ -7,3 +7,18 @@ const  digitalRoot = (num:number):number =>{
      return digitalRoot(a)
 }
 console.log(digitalRoot(1045))
+
+//second one but not working 
+
+function addBinary(a:number,b:number) : string{
+    
+    let firstInt :string = a.toString(2);
+    let secondInt :string = b.toString(2);
+    let binary : string = firstInt + secondInt;
+    let sum = binary.split('').reduce((a,c)=> a+parseInt(c),0)
+    return sum.toString();
+}
+console.log(addBinary(80,9))
+
+
+
