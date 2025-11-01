@@ -10,7 +10,7 @@ console.log(digitalRoot(1045))
 
 //second one but not working 
 
-function addBinary(a:number,b:number) : string{
+function addBinarys(a:number,b:number) : string{
     
     let firstInt :string = a.toString(2);
     let secondInt :string = b.toString(2);
@@ -20,5 +20,9 @@ function addBinary(a:number,b:number) : string{
 }
 console.log(addBinary(80,9))
 
+ // this the actual one we can use and simplest 
+function addBinary(a: number, b: number) : string{
+    return (a+b).toString(2);
+}
 
 
