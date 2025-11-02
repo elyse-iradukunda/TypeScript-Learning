@@ -28,3 +28,12 @@ let value: unknown ="Elyse"
 
 if(typeof value =="string"){
 console.log(value)}
+
+// here is my today's kata
+
+const squareIt =(a:number): number =>{
+  
+  return Math.sqrt(a)
+}
+
+console.log(squareIt(3))
