@@ -25,4 +25,10 @@ function addBinary(a: number, b: number) : string{
     return (a+b).toString(2);
 }
 
-// finding square root of number in ts
+// find printer Errors 
+
+ function printerError(s: string): string {
+  return `${s.replace(/[a-m]/gi, '').length}/${s.length}`
+}
+
+
