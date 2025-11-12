@@ -8,7 +8,7 @@ class Elyse implements User {
      name:string;
      age:number;
      address:string;
-     constructor(name,age,address){
+     constructor(name:string,age:number,address:string){
          this.name=name;
          this.age=age;
          this.address=address;
