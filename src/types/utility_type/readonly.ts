@@ -14,6 +14,7 @@
 
  }
  
- person.name ="Ellyse"; // this will throw an erro because we have setted that our object is going tobe read only no thing you can do on it.
+ person.name ="Ellyse"; 
+ // // this will throw an erro because we have setted that our object is going tobe read only no thing you can do on it.
  
  
