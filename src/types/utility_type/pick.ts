@@ -10,6 +10,5 @@
   let person: Picktype ={
      name:"elyse",
      age:48
-
  }
  
