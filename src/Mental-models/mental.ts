@@ -49,3 +49,15 @@ function getStatusMessage(status:Status):string {
       return status
 }
 console.log(getStatusMessage(Status.Active));
+
+// question 5 about generic function 
+
+// Write a generic function that returns the first element of an array
+function getFirstElement<T>(arr:T[]):T {
+    
+  return arr[0];
+}
+
+console.log(getFirstElement([1, 2, 3]));
+console.log(getFirstElement(["hello", "brother", "are"]));
+console.log(getFirstElement([{ id: 1 }, { id: 2 }]))

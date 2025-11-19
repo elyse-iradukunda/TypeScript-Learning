@@ -20,5 +20,3 @@ let school = School.sayHello();
 console.log(Home.ImAtHome())
 
 console.log(school)
-
-1
