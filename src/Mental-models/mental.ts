@@ -53,7 +53,7 @@ console.log(getStatusMessage(Status.Active));
 // question 5 about generic function 
 
 // Write a generic function that returns the first element of an array
-function getFirstElement<T>(arr:T[]):T {
+function getFirstElement<T>(arr:T[]):T | any {
     
   return arr[0];
 }
