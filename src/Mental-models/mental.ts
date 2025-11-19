@@ -35,3 +35,17 @@ function introduceUser(user:User):string {
   return `Hello, my name is ${user.name}, I am ${user.age} years old, and my email is ${user.email}`;
 }
 console.log(introduceUser(user))
+
+
+// question 4 about enum 
+
+const  enum Status {
+    Active="The item is currently active",
+    Inactive="The item is currently inactive",
+    Pending="The item is pending review"
+};
+
+function getStatusMessage(status:Status):string {
+      return status
+}
+console.log(getStatusMessage(Status.Active));
