@@ -85,4 +85,20 @@ const me:ManagerEmployee ={
 function describeManagerEmployee(me:ManagerEmployee):string {
   return `${me.names} (ID: ${me.employeeId}) manages a team of ${me.teamSize} people`;
 }
-console.log(describeManagerEmployee(me))
+console.log(describeManagerEmployee(me));
+
+
+// question 7 
+
+// Define a missing TypeScript types
+
+
+ type applyOperation =(a:number,b:number)=>number;
+
+function applyOperation(a:number, b:number, operation:applyOperation):number {
+  return operation(a, b);
+}
+
+const add = (x:number, y:number) => x + y;
+const multiply = (x:number, y:number) => x * y;
+
