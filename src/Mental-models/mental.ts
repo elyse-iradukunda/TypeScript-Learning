@@ -31,7 +31,7 @@ let user:User ={
     age:40,
     email:"Ellycreative@.."
 }
-function introduceUser(user:User) {
+function introduceUser(user:User):string {
   return `Hello, my name is ${user.name}, I am ${user.age} years old, and my email is ${user.email}`;
 }
 console.log(introduceUser(user))
