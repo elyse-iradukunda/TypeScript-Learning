@@ -19,3 +19,22 @@ const products = [
 
 const total  = calculateTotal(products);
 const discounted:number = applyDiscount(total, 0.1);
+
+
+// the first question you have to understand 👌
+
+
+class Counter {
+  static count:number = 0;
+
+  increment() {
+    Counter.count++;
+  }
+
+  static getCount():number {
+    return Counter.count; 
+  }
+}
+
+
+
