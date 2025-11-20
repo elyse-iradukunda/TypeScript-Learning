@@ -1,0 +1,21 @@
+function calculateTotal(items:{price:number}[]):number{
+  let total = 0;
+  for (let item of items) {
+    total += item.price;
+  }
+  return parseInt(total.toFixed(2));
+}
+
+function applyDiscount(amount:number, discount:number):number {
+  const discountedAmount = amount - (amount * discount);
+  return discountedAmount;
+}
+
+const products = [
+  { name: "Laptop", price: 999 },
+  { name: "Mouse", price: 25 },
+  { name: "Keyboard", price: 79 }
+];
+
+const total  = calculateTotal(products);
+const discounted:number = applyDiscount(total, 0.1);
