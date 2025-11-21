@@ -36,5 +36,23 @@ class Counter {
   }
 }
 
+// second question about gate preparation
+
+ enum recipe{
+  ingredients="Here is the ingrediengs"
+}
+
+const processRecipe = (recipe: recipe) => {
+  console.log(recipe);
+};
+
+type processRecipe=({
+  title: 'Chocolate Chip Cookies',
+  ingredients: [
+    { name: 'Flour', quantity: 4 },
+    { name: 'Sugar', quantity: '1 cup', price: 5 },
+  ],
+  instructions: '...',
+});
 
 
