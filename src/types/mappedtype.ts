@@ -74,3 +74,20 @@ logOrder({
     address:"kimihurura",
   }
 });
+
+// last question in gates 
+
+interface Car {
+    brand: string;
+    model: string;
+    price: number;
+}
+
+function printCarModel(car: Car) {
+    console.log(car.model.toUpperCase());
+    console.log(car.price.toFixed(2));
+}
+
+printCarModel({ brand: "Toyota" , price: 3000,model:"chaliphonia"});
+
+//remove those things of being optional and make price into it's type then add model as remaining property
