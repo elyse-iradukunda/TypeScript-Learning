@@ -50,3 +50,27 @@ move(
   // @ts-expect-error - "20" is not a valid distance
   '20'
 );
+
+
+
+///
+
+type Order={
+    customer:{
+        address:string;
+        name:string;
+      
+
+    }
+}
+
+const logOrder = (order: Order) => {
+  console.log(`Shipping to: ${order.customer.address}`);
+};
+
+logOrder({
+  customer: {
+    name: 'Jane',
+    address:"kimihurura",
+  }
+});
