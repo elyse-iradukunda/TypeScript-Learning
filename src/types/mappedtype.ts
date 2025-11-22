@@ -91,3 +91,13 @@ function printCarModel(car: Car) {
 printCarModel({ brand: "Toyota" , price: 3000,model:"chaliphonia"});
 
 //remove those things of being optional and make price into it's type then add model as remaining property
+
+
+// type assertion is here
+
+ let values: number|string|never ;
+ 
+ let inferd= values as string;
+ 
+ inferd = 80;
+ 
