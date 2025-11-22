@@ -101,3 +101,4 @@ printCarModel({ brand: "Toyota" , price: 3000,model:"chaliphonia"});
  
  inferd = 80;
  
+
