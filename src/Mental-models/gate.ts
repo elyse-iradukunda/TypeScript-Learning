@@ -70,3 +70,25 @@ const config: Config = {
 
 // Attempting to modify should cause a TypeScript error
 // config.apiUrl = "https://api.newsite.com"; // This should error
+
+
+// about literal type in typescrip
+
+
+
+
+// Define a Direction type with literal values
+
+ type Direction = "north"|"south"|"east"|"west";
+function move(direction:Direction) {
+  switch(direction) {
+    case "north":
+      return { x: 0, y: 1 };
+    case "south":
+      return { x: 0, y: -1 };
+    case "east":
+      return { x: 1, y: 0 };
+    case "west":
+      return { x: -1, y: 0 };
+  }
+}
