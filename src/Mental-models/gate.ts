@@ -55,4 +55,18 @@ type processRecipe=({
   instructions: '...',
 });
 
+// about readonly test
 
+// Define the Config interface with readonly properties
+
+interface Config{
+readonly apiUrl:string;
+ timeout:number;
+}
+const config: Config = {
+  apiUrl: "https://api.example.com",
+  timeout: 5000
+};
+
+// Attempting to modify should cause a TypeScript error
+// config.apiUrl = "https://api.newsite.com"; // This should error
