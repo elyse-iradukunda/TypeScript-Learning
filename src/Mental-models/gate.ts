@@ -92,3 +92,9 @@ function move(direction:Direction) {
       return { x: -1, y: 0 };
   }
 }
+
+// about extends : means Distributive conditional type
+
+type A = number|string;
+
+type B = A extends string ? true : false;
