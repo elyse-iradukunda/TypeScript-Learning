@@ -1,15 +1,41 @@
- interface Person{
+//  interface Person{
      
-     name:string;
-     address:string;
-     age:number;
+//      name:string;
+//      address:string;
+//      age:number;
+//  }
+
+//   type Picktype= Pick<Person,'name'|'age'>;
+  
+//   let person: Picktype ={
+//      name:"elyse",
+//      age:48
+//  }
+ 
+//  console.log("Here is the things I have done here");
+
+ /// decorators
+
+
+ function myDeco(target:any){
+ class Animal{
+    dog(){
+        console.log("Bark!");
+    }
  }
 
-  type Picktype= Pick<Person,'name'|'age'>;
-  
-  let person: Picktype ={
-     name:"elyse",
-     age:48
+
  }
- 
- console.log("Here is the things I have done here");
+  @myDeco
+  class User{
+     dog();
+  }
+
+  const hi:User = new User();
+
+  hi.dog();  
+
+
+
+
+
