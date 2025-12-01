@@ -17,23 +17,32 @@
  /// decorators
 
 
- function myDeco(target:any){
- class Animal{
-    dog(){
-        console.log("Bark!");
-    }
- }
+//  function myDeco(target:any){
+//  class Animal{
+//     dog(){
+//         console.log("Bark!");
+//     }
+//  }
 
 
- }
-  @myDeco
-  class User{
-     dog();
-  }
+//  }
+//   @myDeco
+//   class User{
+//      dog();
+//   }
 
-  const hi:User = new User();
+//   const hi:User = new User();
 
-  hi.dog();  
+//   hi.dog();  
+
+
+type checkout=(a:number,b:string) => number;
+  
+
+
+
+
+
 
 
 
