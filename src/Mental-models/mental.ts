@@ -102,3 +102,50 @@ function applyOperation(a:number, b:number, operation:applyOperation):number {
 const add = (x:number, y:number) => x + y;
 const multiply = (x:number, y:number) => x * y;
 
+//..................
+
+
+// Video Solution: https://youtube.com/watch?v=ojagklq8aas
+
+/* _____________ Your Code Here _____________ */
+
+type MyOmit<T, K> = any
+
+/* _____________ Test Cases _____________ */
+import type { Equal, Expect } from '../helpers'
+
+type cases = [
+  Expect<Equal<Expected1, MyOmit<Todo, 'description'>>>,
+  Expect<Equal<Expected2, MyOmit<Todo, 'description' | 'completed'>>>,
+  Expect<Equal<Expected3, MyOmit<Todo1, 'description' | 'completed'>>>,
+]
+
+// @ts-expect-error
+type error = MyOmit<Todo, 'description' | 'invalid'>
+
+interface Todo {
+  title: string
+  description: string
+  completed: boolean
+}
+
+interface Todo1 {
+  readonly title: string
+  description: string
+  completed: boolean
+}
+
+interface Expected1 {
+  title: string
+  completed: boolean
+}
+
+interface Expected2 {
+  title: string
+}
+
+interface Expected3 {
+  readonly title: string
+}
+
+
