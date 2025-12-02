@@ -153,11 +153,17 @@ type custom<T>={
    readonly [key in keyof T]:T[key];
 }
 
-let obj={
-   names:"Elyse",
-   age:50
+interface Pser{
+  name:string;
+  age:number;
 }
 
+type makeItReadOnly = custom<Pser>;
+
+let obj:makeItReadOnly={
+   name:"Elyse",
+   age:50
+}
 
 
 
