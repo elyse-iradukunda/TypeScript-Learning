@@ -109,43 +109,55 @@ const multiply = (x:number, y:number) => x * y;
 
 /* _____________ Your Code Here _____________ */
 
-type MyOmit<T, K> = any
+// type MyOmit<T, K> = any
 
-/* _____________ Test Cases _____________ */
-import type { Equal, Expect } from '../helpers'
+// /* _____________ Test Cases _____________ */
+// import type { Equal, Expect } from '../helpers'
 
-type cases = [
-  Expect<Equal<Expected1, MyOmit<Todo, 'description'>>>,
-  Expect<Equal<Expected2, MyOmit<Todo, 'description' | 'completed'>>>,
-  Expect<Equal<Expected3, MyOmit<Todo1, 'description' | 'completed'>>>,
-]
+// type cases = [
+//   Expect<Equal<Expected1, MyOmit<Todo, 'description'>>>,
+//   Expect<Equal<Expected2, MyOmit<Todo, 'description' | 'completed'>>>,
+//   Expect<Equal<Expected3, MyOmit<Todo1, 'description' | 'completed'>>>,
+// ]
 
-// @ts-expect-error
-type error = MyOmit<Todo, 'description' | 'invalid'>
+// // @ts-expect-error
+// type error = MyOmit<Todo, 'description' | 'invalid'>
 
-interface Todo {
-  title: string
-  description: string
-  completed: boolean
+// interface Todo {
+//   title: string
+//   description: string
+//   completed: boolean
+// }
+
+// interface Todo1 {
+//   readonly title: string
+//   description: string
+//   completed: boolean
+// }
+
+// interface Expected1 {
+//   title: string
+//   completed: boolean
+// }
+
+// interface Expected2 {
+//   title: string
+// }
+
+// interface Expected3 {
+//   readonly title: string
+// }
+
+
+type custom<T>={
+   readonly [key in keyof T]:T[key];
 }
 
-interface Todo1 {
-  readonly title: string
-  description: string
-  completed: boolean
+let obj={
+   names:"Elyse",
+   age:50
 }
 
-interface Expected1 {
-  title: string
-  completed: boolean
-}
 
-interface Expected2 {
-  title: string
-}
-
-interface Expected3 {
-  readonly title: string
-}
 
 
