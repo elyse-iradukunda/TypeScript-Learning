@@ -164,7 +164,14 @@
 
 //    age:50
 // }
-
+type a ={
+  name:string;
+  address:{
+    street:string;
+    city:string;
+  }
+}
+/*
 type prods = {
   name:string;
   price:number;
@@ -194,3 +201,83 @@ const products = [
 
 const total = calculateTotal(products);
 const discounted = applyDiscount(parseInt(total), 0.1);
+*/
+
+
+/*
+type ob1 ={
+  name:string;
+  address:{
+    street:string;
+    city:string;
+  }
+}
+
+
+
+type ob2 ={
+  age:number;
+  city:string;
+}
+
+function mergeObjects(obj1:ob1, obj2:ob2):{} {
+  return { ...obj1, ...obj2 };
+}
+
+function getNestedValue(obj:ob1, path:string) {
+  const keys = path.split('.');
+  let value:any = obj;
+  for (let key of keys) {
+    value = value[key];
+  }
+  return value;
+}
+
+const person = {
+  name: "John",
+  address: {
+    street: "123 Main St",
+    city: "New York"
+  }
+};
+
+
+
+const updates = { age: 30, city: "Boston" };
+const merged = mergeObjects(person, updates);
+const street = getNestedValue(person, "address.street");
+
+*/
+
+
+
+/*
+type oo ={
+  name:string;
+  quantity:string|number;
+  price?:number
+}
+type gt= oo[]
+
+
+type recipe = {
+  title:string;
+  ingredients:gt
+  ,instructions: string;
+}
+
+
+const processRecipe = (recipe: recipe) => {
+  console.log(recipe.ingredients);
+};
+
+processRecipe({
+  title: 'Chocolate Chip Cookies',
+  ingredients: [
+    { name: 'Flour', quantity: 4 },
+    { name: 'Sugar', quantity: '1 cup', price: 5 },
+  ],
+  instructions: '...',
+});
+
+*/
