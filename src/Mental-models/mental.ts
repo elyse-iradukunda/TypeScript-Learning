@@ -281,3 +281,39 @@ processRecipe({
 });
 
 */
+
+
+// interface Car {
+//     brand: string;
+//     model: string;
+//     price: number;
+// }
+
+// function printCarModel(car: Car) {
+//     console.log(car.model.toUpperCase());
+//     console.log(car.price.toFixed(2));
+// }
+
+// printCarModel({ brand: "Toyota" , price: 3000,model:''});
+
+let obj  = {
+  name: "",
+  lastname: "",
+}
+
+
+
+type customType ={
+[K :string]:string|number;
+}
+
+let  obj2: customType = {
+  district: "string",
+  sectore: "string",
+  cell: "string",
+  addres:10
+}
+
+
+
+
