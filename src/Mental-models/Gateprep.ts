@@ -66,16 +66,27 @@
 
 // Solve all the typing issues in the code without changing the implementation
  
-type mess= { to: string; text?: string };
+// type mess= { to: string; text?: string };
 
-const sendMessage = (message: mess):string|undefined => {
-  if(message.text !== undefined)  return message.text.toUpperCase();
- else {
-} return undefined;
+// const sendMessage = (message: mess):string|undefined => {
+//   if(message.text !== undefined)  return message.text.toUpperCase();
+//  else {
+// } return undefined;
   
-};
+// };
 
-console.log(sendMessage({ to: 'Alice' }));
+// console.log(sendMessage({ to: 'Alice' }));
+
+interface User {
+  name: string;
+  age: number;
+  email: string;
+}
+
+// Complete the types of this function
+function getProperty<T,K extends keyof T>(obj:T, key:K): T[K] {
+  return obj[key];
+}
 
 
 
