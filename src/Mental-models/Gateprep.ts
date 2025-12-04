@@ -77,16 +77,55 @@
 
 // console.log(sendMessage({ to: 'Alice' }));
 
-interface User {
-  name: string;
-  age: number;
-  email: string;
+// interface User {
+//   name: string;
+//   age: number;
+//   email: string;
+// }
+
+// // Complete the types of this function
+// function getProperty<T,K extends keyof T>(obj:T, key:K): T[K] {
+//   return obj[key];
+// }
+
+
+// Solve all the typing issues in the code without changing the implementation
+
+
+function format(value: string): string;
+function format(value: number): string;
+function format(value: boolean): string; // only add this overloading 
+function format<T>(value: T): string {
+  if (typeof value === 'string') {
+    return value.toUpperCase();
+  } else if (typeof value === 'number') {
+    return value.toFixed(2);
+  } else {
+    return '';
+  }
 }
 
-// Complete the types of this function
-function getProperty<T,K extends keyof T>(obj:T, key:K): T[K] {
-  return obj[key];
-}
+format(true);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
