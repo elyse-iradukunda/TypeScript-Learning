@@ -53,14 +53,30 @@
 
 // Define a missing TypeScript types
 
- type Op = (a:number,b:number)=> number;
+//  type Op = (a:number,b:number)=> number;
 
-function applyOperation(a:number, b:number, operation:Op): number {
-  return operation(a, b);
-}
+// function applyOperation(a:number, b:number, operation:Op): number {
+//   return operation(a, b);
+// }
 
-const add = (x:number, y:number) => x + y;
-const multiply = (x:number, y:number) => x * y;
+// const add = (x:number, y:number) => x + y;
+// const multiply = (x:number, y:number) => x * y;
+
+
+
+// Solve all the typing issues in the code without changing the implementation
+ 
+type mess= { to: string; text?: string };
+
+const sendMessage = (message: mess):string|undefined => {
+  if(message.text !== undefined)  return message.text.toUpperCase();
+ else {
+} return undefined;
+  
+};
+
+console.log(sendMessage({ to: 'Alice' }));
+
 
 
 
