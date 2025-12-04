@@ -25,11 +25,29 @@
 
 // console.log(setRange([true, { name: 'Patrick', age: 3}]));
 
+// function getFirstElement<T>(arr:T[]):T | undefined{
+//      return arr[0]
+//    }
+
+// console.log(getFirstElement([1, 2, 3]))
+
+
+interface Employee {
+  name:string;
+  employeeId:number;
+
+}
+
+interface Manager {
+    teamSize:number;
+}
+
+type ManagerEmployee = Employee & Manager;
+
+
+function describeManagerEmployee(me:ManagerEmployee) {
+  return `${me.name} (ID: ${me.employeeId}) manages a team of ${me.teamSize} people`;
+}
 
 
 
-function getFirstElement<T>(arr:T[]):T | undefined{
-     return arr[0]
-   }
-
-console.log(getFirstElement([1, 2, 3]))
