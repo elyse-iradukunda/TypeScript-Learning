@@ -32,22 +32,39 @@
 // console.log(getFirstElement([1, 2, 3]))
 
 
-interface Employee {
-  name:string;
-  employeeId:number;
+// interface Employee {
+//   name:string;
+//   employeeId:number;
 
+// }
+
+// interface Manager {
+//     teamSize:number;
+// }
+
+// type ManagerEmployee = Employee & Manager;
+
+
+// function describeManagerEmployee(me:ManagerEmployee) {
+//   return `${me.name} (ID: ${me.employeeId}) manages a team of ${me.teamSize} people`;
+// }
+
+
+
+// Define a missing TypeScript types
+
+ type Op = (a:number,b:number)=> number;
+
+function applyOperation(a:number, b:number, operation:Op): number {
+  return operation(a, b);
 }
 
-interface Manager {
-    teamSize:number;
-}
-
-type ManagerEmployee = Employee & Manager;
+const add = (x:number, y:number) => x + y;
+const multiply = (x:number, y:number) => x * y;
 
 
-function describeManagerEmployee(me:ManagerEmployee) {
-  return `${me.name} (ID: ${me.employeeId}) manages a team of ${me.teamSize} people`;
-}
+
+
 
 
 
