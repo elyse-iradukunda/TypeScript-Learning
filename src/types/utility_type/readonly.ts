@@ -17,4 +17,9 @@
  person.name ="Ellyse"; 
  // // this will throw an erro because we have setted that our object is going tobe read only no thing you can do on it.
  
- 
+ function isTest(pram):pram is number{
+ return pram
+}
+
+
+console.log(isTest("hi"))
