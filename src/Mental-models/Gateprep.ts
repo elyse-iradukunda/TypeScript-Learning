@@ -251,7 +251,7 @@ processRecipe({
   instructions: '...',
 });
 
-console.log(``)
+console.log(`last push on typescript learning after gate`)
 
 
 
